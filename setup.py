@@ -35,10 +35,11 @@ def find_boost(hint=None, verbose=True):
 
     search_dirs += [
         "/usr/include",
+        "/usr/local/boost_1_80_0/"
         "/usr/local/include",
         "/usr/local/homebrew/include",
         "/opt/local/include",
-        "/data/sljg2/software/boost/include",
+        "/data/sljg2/software/boost/include"
     ]
 
     for d in search_dirs:
@@ -83,7 +84,7 @@ extensions = [
     Extension(
         "pyfof",
         sources=["pyfof/pyfof" + ext, "pyfof/fof.cc", "pyfof/fof_brute.cc"],
-        extra_compile_args=["-std=c++11", "-Wno-return-type"],
+        extra_compile_args=["-std=c++1z", "-Wno-return-type"],
         language="c++",
     )
 ]
